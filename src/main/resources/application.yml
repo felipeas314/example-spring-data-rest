@@ -1,0 +1,20 @@
+spring:
+  jpa:
+    database: postgresql
+    show-sql: true
+    generate-ddl: true
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/example
+    username: example
+    password: example
+    driver-class-name: org.postgresql.Driver
+    
+  application:
+    name: example-spring-data-rest
+ 
+server:
+  port: 8090
+  
+    
+ 
