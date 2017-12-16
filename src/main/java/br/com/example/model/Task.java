@@ -1,8 +1,13 @@
 package br.com.example.model;
 
+import java.util.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 @Entity(name = "tasks")
 public class Task {
@@ -14,7 +19,13 @@ public class Task {
 	private String title;
 
 	private String description;
+	
+	@ManyToOne
+	private User user;
 
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date date;
+	
 	public Integer getId() {
 		return id;
 	}
